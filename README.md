@@ -34,3 +34,29 @@ The dataset contains information about the clients of a certain bank. Your task 
 ## ✅ Target varible - Целевая переменная
 
 - SeriousDlqin2yrs: клиент имел просрочку 90 и более дней
+
+## ✅ Algorithm used - Использованный алгоритм
+
+Logistic Regression is used as a Baseline Model. This report presents an approach to predict the credit scores of customers using the Logistic Regression machine learning algorithm. The research objective of this project is to perform a comparative study between feature selection and feature extraction, against the same dataset using the Logistic Regression machine learning algorithm. 
+
+Логистическая регрессия используется в качестве базовой модели. В этом отчете представлен подход к прогнозированию кредитных рейтингов клиентов с использованием алгоритма машинного обучения логистической регрессии. Целью исследования этого проекта является проведение сравнительного исследования между выбором признаков и извлечением признаков на одном и том же наборе данных с использованием алгоритма машинного обучения логистической регрессии.
+
+## ✅ Data processing steps - Обработка данных
+
+Below is the description of the data cleaning steps before substantial training.
+
+1. Data cleaning from duplicates. Replacing columns with object data type values ​​to numeric ones.
+2. Determination of correlation dependencies. Replacing Nan values ​​in three columns with median values:
+Unknown age: 14733 (>9%)
+Unknown monthly income: 29195 (>19%)
+Unknown number of dependents: 3824 (>2%)
+3. The decision made: not to accept AgeGroup in training the model.
+
+Ниже дано описание шагов по очистке данных перед непосредственно самим обучением.
+
+1. Очистка данных от дубликатов. Замена столбцов со значеними объектного типа данных на числовые.
+2. Определение корреляционных зависимостей переменных. Замена значений Nan в трёх столбцах на медианные значения:
+Unknown age: 14733 (>9%)
+Unknown monthly income: 29195 (>19%)
+Unknown number of dependents: 3824 (>2%)
+3. Решение не учитывать AgeGroup в обучении модели.
