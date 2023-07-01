@@ -8,7 +8,7 @@ import xgboost as xgb
 def main():
     st.title('Can we trust you? :nerd_face:') 
     st.image("biz_man.png")
-    model = xgb.Booster()
+    model = xgb.XGBClassifier()
     model.load_model('xgb_model.json')
 
     st.subheader('Enter Customer Information')
