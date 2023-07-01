@@ -68,3 +68,7 @@ Unknown age: 14733 (>9%)
 Unknown monthly income: 29195 (>19%)
 Unknown number of dependents: 3824 (>2%)
 3. Решение не учитывать AgeGroup в обучении модели.
+
+## ✅ Streamlit Webapp - Streamlit Приложение
+
+<img width="417" alt="Screenshot 2023-07-01 at 21 02 04" src="https://github.com/javascript-queen/ML_Kaggle_Project_GiveMeSomeCredit/assets/90614620/46a1fe40-e3a9-4796-ba96-783d2bb8e4fe">
