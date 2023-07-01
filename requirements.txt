@@ -11,3 +11,4 @@ six==1.15.0
 urllib3==1.26.14
 xgboost==1.0.2
 scikit-learn
+sklearn
