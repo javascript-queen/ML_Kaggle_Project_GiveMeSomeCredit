@@ -37,9 +37,17 @@ The dataset contains information about the clients of a certain bank. Your task 
 
 ## ✅ Algorithm used - Использованный алгоритм
 
-Logistic Regression is used as a Baseline Model. This report presents an approach to predict the credit scores of customers using the Logistic Regression machine learning algorithm. The research objective of this project is to perform a comparative study between feature selection and feature extraction, against the same dataset using the Logistic Regression machine learning algorithm. 
+- I thought I would try to implement Logistic Regression. It worked. Then I used xgboost.XGBClassifier (a scikit-learn API compatible class for classification problems) as a faster model for a web app on Streamlit. 
+
+Изначально модель обучалась с логистической регрессией. Затем я использовал xgboost.XGBClassifier (класс, совместимый с scikit-learn API, для задач классификации) для веб-приложения на Streamlit.
+
+- Logistic Regression is used as a Baseline Model. This report presents an approach to predict the credit scores of customers using the Logistic Regression machine learning algorithm. The research objective of this project is to perform a comparative study between feature selection and feature extraction, against the same dataset using the Logistic Regression machine learning algorithm. 
 
 Логистическая регрессия используется в качестве базовой модели. В этом отчете представлен подход к прогнозированию кредитных рейтингов клиентов с использованием алгоритма машинного обучения логистической регрессии. Целью исследования этого проекта является проведение сравнительного исследования между выбором признаков и извлечением признаков на одном и том же наборе данных с использованием алгоритма машинного обучения логистической регрессии.
+
+- The xgboost.XGBClassifier is a scikit-learn API compatible class for classification.
+
+xgboost.XGBClassifier — это класс, совместимый с scikit-learn API, для классификации.
 
 ## ✅ Data processing steps - Обработка данных
 
