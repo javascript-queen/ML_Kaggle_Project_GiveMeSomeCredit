@@ -1,74 +1,58 @@
-## 🧧 Bank delinquency on a loan - Банковская просрочка по кредиту
+# 🌐 Stack Overflow Annual Developer Survey
 
-The dataset contains information about the clients of a certain bank. Your task is to predict the target variable according to various characteristics of clients - whether the client had a delay of 90 or more days or not (and if he/she did have a delay, the bank will not issue a loan to this client, otherwise it would)
-
-Датасет содержит информацию о клиентах некоторого банка.
-Ваша задача состоит в том, чтобы по различным характеристикам клиентов спрогнозировать целевую переменную - имел клиент просрочку 90 и более дней или нет (и если имел, то банк не будет выдавать кредит этому клиенту, а иначе будет)
+In May 2023 over 90,000 developers responded to Stack Overflow annual survey about how they learn and level up, which tools they're using, and which ones they want.
      
-## ✅ Data description - Описание данных
+## ✅ Data description 
 
-- RevolvingUtilizationOfUnsecuredLines: общий баланс средств (total balance on credit cards and personal lines of credit except real estate and no installment debt like car loans divided by the sum of credit limits)
+There are seven sections in this survey. The 2nd, 3rd, 4th and 5th sections will appear in a random order. Most questions in this survey are optional. Required questions are marked with *. 
 
-- age: возраст заемщика
+ 1. Basic Information
 
-- NumberOfTime30-59DaysPastDueNotWorse: сколько раз за последние 2 года наблюдалась просрочка 30-59 дней
+2. Education, Work, and Career
 
-- DebtRatio: ежемесячные расходы (платеж по долгам, алиментам, расходы на проживания) деленные на месячный доход
+3. Technology and Tech Culture
 
-- MonthlyIncome: ежемесячный доход
+4. Stack Overflow Usage + Community
 
-- NumberOfOpenCreditLinesAndLoans: количество открытых кредитов (напрмер, автокредит или ипотека) и кредитных карт
+5. Artificial Intelligence
 
-- NumberOfTimes90DaysLate: сколько раз наблюдалась просрочка (90 и более дней)
+6. Professional Developer Series (Optional)
 
-- NumberRealEstateLoansOrLines: количество кредиов (в том числе под залог жилья)
+7. Final Questions
 
-- RealEstateLoansOrLines: закодированное количество кредиов (в том числе под залог жилья) - чем больше код буквы, тем больше кредитов
 
-- NumberOfTime60-89DaysPastDueNotWorse: сколько раз за последние 2 года заемщик задержал платеж на 60-89 дней
+I chose to analyze the data inputs which are listed below:
 
-- NumberOfDependents: количество иждивенцев на попечении (супруги, дети и др)
+- Country 
+- EdLevel - Education Level
+- Experience - Coding working experience in years
+- CompConvertedYearly - Devs' salary per year
 
-- GroupAge: закодированная возрастная группа - чем больше код, тем больше возраст
+The data is chosen to predict the yearly salary depending on your country, experience, and level of education.
+   
+## ✅ Target varible
 
-## ✅ Target varible - Целевая переменная
+- CompConvertedYearly
 
-- SeriousDlqin2yrs: клиент имел просрочку 90 и более дней
+## ✅ Algorithm used - Random Forest (Regression)
 
-## ✅ Algorithm used - Использованный алгоритм
+Random forests are a way of averaging multiple deep decision trees, trained on different parts of the same training set, with the goal of reducing the variance.
 
-- I thought I would try to implement Logistic Regression. It worked. Then I used xgboost.XGBClassifier (a scikit-learn API compatible class for classification problems) as a faster model for a web app on Streamlit. 
+https://www.javatpoint.com/machine-learning-random-forest-algorithm![image](https://github.com/javascript-queen/StackOverflow_Survey_2023_Prediction/assets/90614620/3bc1c597-fa16-4788-afdb-5b482eeb56bb)
 
-Изначально модель обучалась с логистической регрессией. Затем я использовал xgboost.XGBClassifier (класс, совместимый с scikit-learn API, для задач классификации) для веб-приложения на Streamlit.
 
-- Logistic Regression is used as a Baseline Model. This report presents an approach to predict the credit scores of customers using the Logistic Regression machine learning algorithm. The research objective of this project is to perform a comparative study between feature selection and feature extraction, against the same dataset using the Logistic Regression machine learning algorithm. 
-
-Логистическая регрессия используется в качестве базовой модели. В этом отчете представлен подход к прогнозированию кредитных рейтингов клиентов с использованием алгоритма машинного обучения логистической регрессии. Целью исследования этого проекта является проведение сравнительного исследования между выбором признаков и извлечением признаков на одном и том же наборе данных с использованием алгоритма машинного обучения логистической регрессии.
-
-- The xgboost.XGBClassifier is a scikit-learn API compatible class for classification.
-
-xgboost.XGBClassifier — это класс, совместимый с scikit-learn API, для классификации.
-
-## ✅ Data processing steps - Обработка данных
+## ✅ Data processing steps
 
 Below is the description of the data cleaning steps before substantial training.
 
-1. Data cleaning from duplicates. Replacing columns with object data type values ​​to numeric ones.
-2. Determination of correlation dependencies. Replacing Nan values ​​in three columns with median values:
-Unknown age: 14733 (>9%)
-Unknown monthly income: 29195 (>19%)
-Unknown number of dependents: 3824 (>2%)
-3. The decision made: not to accept AgeGroup in training the model.
-
-Ниже дано описание шагов по очистке данных перед непосредственно самим обучением.
-
-1. Очистка данных от дубликатов. Замена столбцов со значеними объектного типа данных на числовые.
-2. Определение корреляционных зависимостей переменных. Замена значений Nan в трёх столбцах на медианные значения:
-Unknown age: 14733 (>9%)
-Unknown monthly income: 29195 (>19%)
-Unknown number of dependents: 3824 (>2%)
-3. Решение не учитывать AgeGroup в обучении модели.
+1. Data preprocessing.
+2. Data cleaning from null values, outliers.
+3. Replacing columns with object data type values ​​to numeric ones where needed.
+4. Choosing a regression model.
 
 ## ✅ Streamlit Webapp - Streamlit Приложение
 
-<img width="417" alt="Screenshot 2023-07-01 at 21 02 04" src="https://github.com/javascript-queen/ML_Kaggle_Project_GiveMeSomeCredit/assets/90614620/46a1fe40-e3a9-4796-ba96-783d2bb8e4fe">
+<img width="794" alt="Screenshot 2023-07-12 at 08 59 34" src="https://github.com/javascript-queen/StackOverflow_Survey_2023_Prediction/assets/90614620/5dae0cd7-a529-4fc6-8d26-aa5fba5650d6">
+
+<img width="791" alt="Screenshot 2023-07-12 at 08 59 20" src="https://github.com/javascript-queen/StackOverflow_Survey_2023_Prediction/assets/90614620/b283c8c5-0989-49f4-8c8f-e8cbb96d3cd0">
+
