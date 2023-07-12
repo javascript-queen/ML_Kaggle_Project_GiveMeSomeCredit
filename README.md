@@ -56,3 +56,9 @@ Below is the description of the data cleaning steps before substantial training.
 
 <img width="791" alt="Screenshot 2023-07-12 at 08 59 20" src="https://github.com/javascript-queen/StackOverflow_Survey_2023_Prediction/assets/90614620/b283c8c5-0989-49f4-8c8f-e8cbb96d3cd0">
 
+## ✅ PS
+
+The [link](https://stackoverflow.com/questions/33330771/git-lfs-this-exceeds-githubs-file-size-limit-of-100-00-mb) which will help you with large files especially datasets😃
+
+Example👇
+`git lfs migrate import --include="*.csv"`
