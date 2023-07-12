@@ -28,8 +28,8 @@ def show_prediction_page():
   st.image(image)
   
   countries = (
+    "Russian Federation",
     "United States of America",
-    "Germany",
     "United Kingdom of Great Britain and Northern Ireland",
     "India",
     "Canada",
@@ -78,7 +78,7 @@ def show_prediction_page():
     "Estonia",
     "Philippines",
     "Serbia",
-    "Chile"
+    "Chile",
     "Other",
   )
   
