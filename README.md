@@ -6,7 +6,7 @@ In May 2023 over 90,000 developers responded to Stack Overflow annual survey abo
 
 There are seven sections in this survey. The 2nd, 3rd, 4th and 5th sections will appear in a random order. Most questions in this survey are optional. Required questions are marked with *. 
 
- 1. Basic Information
+1. Basic Information
 
 2. Education, Work, and Career
 
