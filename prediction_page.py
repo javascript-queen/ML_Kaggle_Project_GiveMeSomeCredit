@@ -29,7 +29,7 @@ def show_prediction_page():
   
   countries = (
     "United States of America",
-    "Russian Federation"
+    "Russian Federation",
     "Germany",
     "United Kingdom of Great Britain and Northern Ireland",
     "India",
