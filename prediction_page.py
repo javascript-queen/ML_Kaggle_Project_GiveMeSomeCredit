@@ -31,6 +31,7 @@ def show_prediction_page():
     "Russian Federation",
     "United States of America",
     "United Kingdom of Great Britain and Northern Ireland",
+    "Germany",
     "India",
     "Canada",
     "France",
